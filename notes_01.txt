@@ -1,0 +1,21 @@
+****************** Neden direkt "cin" ile girdi almayıp "std::getline(std::cin, s) " olarak girdiyi aldık?
+
+    "cin" ile doğrudan giriş almanın bazı sınırlamaları ve riskleri şunlar olabilir:
+
+    Uzun Girdiler: Kullanıcıdan alınan giriş, öngörülemeyen uzunlukta olabilir. Eğer "cin" ile giriş alınırsa, çok uzun bir giriş, hafıza taşmalarına veya beklenmedik hatalara neden olabilir. "std::getline" ile ise metni tamamen okumak ve sınırlamaları kontrol etmek daha kolaydır.
+
+    Boşluklar ve Beyaz Alanlar: "cin", boşluk karakterlerini veya beyaz alanları sadece veriyi ayırmak için kullanır. Bu nedenle, kullanıcıdan alınan metin içinde boşluk veya girintiler olursa, "cin" girdiyi doğru bir şekilde işleyemeyebilir. "std::getline" ise tüm satırı okur ve böylece boşlukları veya beyaz alanları da içerebilecek tam bir satır alınabilir.
+
+    Satır Sonları: "cin", satır sonlarını otomatik olarak işlemez ve girişi satır sonu karakteriyle sonlandırmaz. Bu, beklenmedik sonuçlara yol açabilir. "std::getline" ise satır sonu karakterini görünce girişi sonlandırır ve kullanıcıdan girdiyi satır satır almak için uygundur.
+
+    Bu nedenlerle, kullanıcıdan metin girişi alırken genellikle "std::getline" işlevi tercih edilir. Bu işlev, daha güvenli ve daha esnek bir giriş işlemi sağlar ve beklenmeyen hataları en aza indirir.
+
+
+
+-> notu oku
+-> ex01 kendin yaz bakmadan.
+
+
+
+
+
